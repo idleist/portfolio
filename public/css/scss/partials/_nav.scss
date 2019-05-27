@@ -1,0 +1,129 @@
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  padding: 0 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .menu-toggler {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 650ms ease-out;
+
+    .bar {
+      background: #fff;
+      width: 100%;
+      height: 4px;
+      border-radius: 0.8rem;
+
+      &.half {
+        width: 50%;
+      }
+
+      &.start {
+        transform-origin: right;
+        transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+      }
+
+      &.end {
+        align-self: flex-end;
+        transform-origin: left;
+        transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+      }
+    }
+  }
+
+  .menu-toggler.open {
+    transform: rotate(-45deg);
+    z-index: 100;
+  }
+
+  .bar.start.open {
+    transform: rotate(-90deg) translateX(0.2em);
+  }
+
+  .bar.end.open {
+    transform: rotate(-90deg) translateX(-0.2em);
+  }
+
+  .top-nav {
+    display: none;
+  }
+
+  .overlay-nav {
+    position: absolute;
+    top: -200vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba($text-color, 0.8);
+    transition: all 650ms cubic-bezier(1, 0, 0, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      list-style: none;
+
+      li {
+        font-size: 2rem;
+        text-align: center;
+
+        a {
+          color: white;
+        }
+      }
+    }
+
+    &.open {
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+// .nav-list {
+//   list-style: none;
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// li {
+//   margin: 0 2em;
+// }
+
+// .nav-link {
+//   font-family: "Roboto Condensed", sans-serif;
+//   font-size: 3rem;
+//   padding: 1rem;
+
+//   &:hover,
+//   &:focus {
+//     background: linear-gradient(to top, $primary, $secondary);
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//   }
+// }
+
+// /* Navigation styles when open */
+// .top-nav.open {
+//   top: 0;
+//   border-radius: initial;
+// }
+
+// /* Toggle menu button */

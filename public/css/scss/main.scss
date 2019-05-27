@@ -1,3 +1,28 @@
-body {
-  background: black;
+/* Variables */
+$text-color: #363732;
+$accent-color: #d17a22;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+@import "./partials/nav";
+@import "./partials/header";
