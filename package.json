@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My latest portfolio",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben Rugman",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.0",
+    "nodemon": "^1.19.0",
+    "pug": "^2.0.3"
+  }
+}
