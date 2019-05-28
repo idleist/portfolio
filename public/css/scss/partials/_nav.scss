@@ -1,12 +1,19 @@
 nav {
   position: sticky;
   top: 0;
+  left: 0;
   width: 100%;
   height: 90px;
   padding: 0 1.5em;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all 300ms ease-in;
+
+  .logo {
+    width: 70px;
+  }
 
   .menu-toggler {
     width: 40px;
@@ -92,6 +99,11 @@ nav {
       left: 0;
     }
   }
+}
+
+.navbar1 {
+  height: 70px;
+  background: rgba($text-color, 0.5);
 }
 
 // .nav-list {

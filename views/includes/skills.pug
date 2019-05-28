@@ -1,0 +1,21 @@
+mixin skill(icon, altText, desc)
+    .skill--container
+        img.skill--container-icon(src=icon, alt=altText)
+        p.skill--container-desc=desc    
+
+section
+    h2 skills
+    .skills--container
+        h3 front end
+        .skills--container-grid
+            +skill('assets/svg/html-icon.svg', 'html', 'html')
+            +skill('assets/svg/css-icon.svg', 'css', 'css')
+            +skill('assets/svg/js-icon.svg', 'javascript', 'javascript')
+            +skill('assets/svg/react-icon.svg', 'react', 'react')
+
+    .skills--container
+        h3 back end
+        .skills--container-grid
+            +skill('assets/svg/node-icon.svg', 'node', 'node')
+            +skill('assets/svg/mongo-icon.svg', 'mongo db', 'mongo db')
+           

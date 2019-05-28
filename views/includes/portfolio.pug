@@ -1,0 +1,22 @@
+mixin project(image, altText, desc, skills)
+    .project--container
+        h3.project--container-desc=desc
+        p.project--container-skills=skills 
+        img.project--container-img(src=image, alt=altText)
+        .project--container-info
+            .project--container-btns
+                a.project--container-btn(href="#")
+                    i.fas.fa-tv
+                    p.project--container-btntext view demo
+                a.project--container-btn(href="#")
+                    i.fab.fa-github
+                    p.project--container-btntext view code
+              
+
+section
+    h2 portfolio
+    .projects--container-grid
+        +project('assets/images/pizza-magic.png', 'pizza magic', 'pizza magic website', 'html, bootstrap, css')
+        +project('assets/images/wellbeing.png', 'wellbeing', 'joanna thorne wellbeing', 'html, flexbox, css')
+        +project('assets/images/js-appsuite.png', 'office app', 'javascript office app', 'html, javascript')
+        +project('assets/images/chasing-the-rain.png', 'chasing the rain', 'chasing the rain', 'gatsby js')
