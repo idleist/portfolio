@@ -1,0 +1,30 @@
+.about--img {
+  border-radius: 50%;
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.background {
+  position: relative;
+  width: 100vw;
+  img {
+    position: absolute;
+    min-width: 100%;
+    z-index: -3;
+    top: 0;
+    left: 0;
+  }
+
+  .about--container {
+    width: 90%;
+    margin: 10em auto 0 auto;
+    text-align: justify;
+
+    .about--text {
+      font-size: 1.8rem;
+      margin-bottom: 1em;
+      color: rgba($text-color, 0.9);
+    }
+  }
+}

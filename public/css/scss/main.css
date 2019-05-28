@@ -394,4 +394,36 @@ header {
   text-transform: uppercase;
   color: #fff;
 }
+
+.about--img {
+  border-radius: 50%;
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.background {
+  position: relative;
+  width: 100vw;
+}
+
+.background img {
+  position: absolute;
+  min-width: 100%;
+  z-index: -3;
+  top: 0;
+  left: 0;
+}
+
+.background .about--container {
+  width: 90%;
+  margin: 10em auto 0 auto;
+  text-align: justify;
+}
+
+.background .about--container .about--text {
+  font-size: 1.8rem;
+  margin-bottom: 1em;
+  color: rgba(54, 55, 50, 0.9);
+}
 /*# sourceMappingURL=main.css.map */
