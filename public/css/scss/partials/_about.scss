@@ -1,3 +1,8 @@
+#about {
+  background: url("/assets/svg/aboutbgsm.svg") no-repeat;
+  background-size: 100%;
+}
+
 .about--img {
   border-radius: 50%;
   display: block;
@@ -5,26 +10,12 @@
   margin: 0 auto;
 }
 
-.background {
-  position: relative;
-  width: 100vw;
-  img {
-    position: absolute;
-    min-width: 100%;
-    z-index: -3;
-    top: 0;
-    left: 0;
-  }
-
-  .about--container {
-    width: 90%;
-    margin: 10em auto 0 auto;
+.about--container-text {
+  padding-top: 23%;
+  .about--text {
     text-align: justify;
-
-    .about--text {
-      font-size: 1.8rem;
-      margin-bottom: 1em;
-      color: rgba($text-color, 0.9);
-    }
+    font-size: 1.4rem;
+    margin-bottom: 1em;
+    color: rgba($text-color, 0.9);
   }
 }

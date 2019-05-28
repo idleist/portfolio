@@ -1,0 +1,95 @@
+#contact {
+  background: url("/assets/svg/contactbg.svg") no-repeat;
+  background-size: 100%;
+}
+
+// Form CSS
+
+form {
+  font-family: "Lato", sans-serif;
+}
+
+#form--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form--container {
+  box-sizing: border-box;
+  padding: 2em;
+  width: 80%;
+  margin-bottom: 25px;
+
+  .form--heading {
+    text-align: center;
+    margin: 0 0 1em 0;
+    padding: 0;
+    color: #fff;
+  }
+
+  input[type="submit"] {
+    background: $accent-color;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.form--input-container {
+  position: relative;
+
+  input,
+  textarea {
+    width: 100%;
+    margin-bottom: 30px;
+    // padding: 10px 0 0 0;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid rgba($accent-color, 0.7);
+    outline: none;
+    background: none;
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-size: 1rem;
+    /*Pointer Event allows input field to be clicked through the label*/
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  input:focus ~ label,
+  textarea:focus ~ label,
+  input:valid ~ label,
+  textarea:valid ~ label {
+    top: -1.1em;
+    left: 0;
+    font-size: 0.8rem;
+    color: $accent-color;
+    outline: none;
+    border: none;
+  }
+}
+/*Removes annoying red outline if no text input*/
+input:invalid,
+textarea:invalid {
+  box-shadow: none;
+}
+
+.contact {
+  background-color: $text-color;
+}

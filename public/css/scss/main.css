@@ -18,21 +18,6 @@ body {
   position: relative;
 }
 
-.container {
-  width: 90%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 a {
   text-decoration: none;
 }
@@ -237,7 +222,7 @@ header {
   font-size: 7rem;
   font-weight: 300;
   margin-bottom: 0.2em;
-  color: #d17a22;
+  color: #168d8d;
 }
 
 .hero--container-sub {
@@ -252,7 +237,7 @@ header {
   text-transform: uppercase;
   font-size: 1.7rem;
   color: #fff;
-  background: #d17a22;
+  background: #168d8d;
   border-radius: 10px;
   padding: 0.5em 1em;
 }
@@ -381,7 +366,7 @@ header {
           align-items: center;
   margin: 0 0.3em;
   padding: 0.5em 1em;
-  background-color: #d17a22;
+  background-color: #168d8d;
   border-radius: 5px;
 }
 
@@ -395,6 +380,11 @@ header {
   color: #fff;
 }
 
+#about {
+  background: url("/assets/svg/aboutbgsm.svg") no-repeat;
+  background-size: 100%;
+}
+
 .about--img {
   border-radius: 50%;
   display: block;
@@ -402,28 +392,144 @@ header {
   margin: 0 auto;
 }
 
-.background {
-  position: relative;
-  width: 100vw;
+.about--container-text {
+  padding-top: 23%;
 }
 
-.background img {
-  position: absolute;
-  min-width: 100%;
-  z-index: -3;
-  top: 0;
-  left: 0;
-}
-
-.background .about--container {
-  width: 90%;
-  margin: 10em auto 0 auto;
+.about--container-text .about--text {
   text-align: justify;
-}
-
-.background .about--container .about--text {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   margin-bottom: 1em;
   color: rgba(54, 55, 50, 0.9);
+}
+
+#contact {
+  background: url("/assets/svg/contactbg.svg") no-repeat;
+  background-size: 100%;
+}
+
+form {
+  font-family: "Lato", sans-serif;
+}
+
+#form--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form--container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2em;
+  width: 80%;
+  margin-bottom: 25px;
+}
+
+.form--container .form--heading {
+  text-align: center;
+  margin: 0 0 1em 0;
+  padding: 0;
+  color: #fff;
+}
+
+.form--container input[type="submit"] {
+  background: #168d8d;
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
+  border: none;
+  outline: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form--input-container {
+  position: relative;
+}
+
+.form--input-container input,
+.form--input-container textarea {
+  width: 100%;
+  margin-bottom: 30px;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid rgba(22, 141, 141, 0.7);
+  outline: none;
+  background: none;
+}
+
+.form--input-container label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 1rem;
+  /*Pointer Event allows input field to be clicked through the label*/
+  pointer-events: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.form--input-container input:focus ~ label,
+.form--input-container textarea:focus ~ label,
+.form--input-container input:valid ~ label,
+.form--input-container textarea:valid ~ label {
+  top: -1.1em;
+  left: 0;
+  font-size: 0.8rem;
+  color: #168d8d;
+  outline: none;
+  border: none;
+}
+
+/*Removes annoying red outline if no text input*/
+input:invalid,
+textarea:invalid {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.contact {
+  background-color: #363732;
+}
+
+footer {
+  background-color: #363732;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  padding: 0.5em 0;
+}
+
+footer .contact {
+  width: 90%;
+  padding-bottom: 1em;
 }
 /*# sourceMappingURL=main.css.map */
