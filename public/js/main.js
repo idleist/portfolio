@@ -38,12 +38,11 @@ toggler.addEventListener("click", e => {
 });
 
 window.onscroll = function() {
-  var nav = document.querySelector("nav");
+  let nav = document.querySelector("nav");
+
   if (window.pageYOffset >= 100) {
-    nav.classList.add("navbar1");
+    nav.classList.add("navbar-float");
   } else {
-    nav.classList.remove("navbar1");
+    nav.classList.remove("navbar-float");
   }
 };
-
-// this.classList.toggle("open"));

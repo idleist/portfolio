@@ -2,7 +2,11 @@ mixin project(image, altText, desc, skills)
     .project--container
         h3.project--container-desc=desc
         p.project--container-skills=skills 
-        img.project--container-img(src=image, alt=altText)
+        a.project--container-link(href="#")
+            //- .line1
+            //- .line2
+            p.text view project
+            img.project--container-img(src=image, alt=altText)
         .project--container-btns
             a.project--container-btn(href="#")
                 i.fas.fa-tv

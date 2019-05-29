@@ -1,8 +1,6 @@
 .skills--container {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex(column, center, null);
   margin-bottom: 2em;
 
   h3 {
@@ -18,10 +16,7 @@
     grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
 
     .skill--container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
+      @include flex(column, center, space-between);
 
       &-icon {
         width: 5rem;

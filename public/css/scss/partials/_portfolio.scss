@@ -3,10 +3,7 @@
   grid-template-columns: 1fr;
 
   .project--container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex(column, center, center);
     width: 100%;
     margin-bottom: 2.5em;
 
@@ -21,28 +18,30 @@
       text-transform: uppercase;
       font-size: 1.1rem;
       color: rgba($text-color, 0.7);
+      margin-bottom: 1em;
+    }
+
+    &-link {
+      width: 80%;
+      position: relative;
     }
 
     &-img {
-      width: 80%;
+      width: 100%;
       border: 3px solid white;
       box-shadow: 0 0 2px 0 rgba($text-color, 0.5);
-      margin-top: 1em;
     }
   }
 }
 
 .project--container-btns {
-  display: flex;
-  justify-content: space-between;
+  @include flex(null, null, space-between);
   margin-top: 0.5em;
 
   .project--container-btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(null, center, space-between);
     margin: 0 0.3em;
-    padding: 0.5em 1em;
+    padding: 0.3em 1.3em;
     background-color: $accent-color;
     border-radius: 5px;
 
@@ -51,9 +50,64 @@
       padding-right: 0.5em;
     }
 
-    p {
+    .project--container-btntext {
+      font-size: 1rem;
       text-transform: uppercase;
       color: #fff;
     }
   }
+}
+
+/* Hover Effect */
+.project--container-link::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(#d17a22, 0.9) 0%,
+    rgba(#168d8d, 0.9) 100%
+  );
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 300ms ease-in;
+}
+
+// .line1 {
+//   position: absolute;
+//   z-index: 1;
+//   bottom: 40%;
+//   opacity: 0.6;
+//   width: 90%;
+//   height: 0.2em;
+//   background: #fff;
+// }
+
+// .line2 {
+//   position: absolute;
+//   z-index: 1;
+//   bottom: 36%;
+//   opacity: 0.6;
+//   width: 80%;
+//   height: 0.2em;
+//   background: #fff;
+// }
+
+.text {
+  position: absolute;
+  z-index: 1;
+  font-size: 1.6rem;
+  color: rgba(#fff, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  opacity: 0;
+  transition: all 300ms ease-in;
+}
+
+.project--container-link:hover &::before .text {
+  opacity: 1;
 }

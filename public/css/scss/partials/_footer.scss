@@ -1,0 +1,36 @@
+footer {
+  background-color: $text-color;
+  @include flex(column, center, center);
+  color: #fff;
+  padding: 0.5em 0;
+
+  .contact {
+    width: 90%;
+    padding-bottom: 1em;
+    @include flex(null, null, space-between);
+  }
+}
+
+.contact--links {
+  @include flex(column, center, space-between);
+
+  .cv--btn {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    color: #fff;
+    background: $accent-color;
+    border-radius: 10px;
+    padding: 0.3em 0.8em;
+  }
+}
+
+.contact--links-social {
+  a {
+    margin: 0 0.3em;
+    img {
+      width: 2em;
+    }
+  }
+}

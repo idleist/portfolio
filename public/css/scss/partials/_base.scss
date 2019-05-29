@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-family: $text-font;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+section {
+  width: 100%;
+
+  h2 {
+    color: rgba($text-color, 0.9);
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 1em 0;
+    text-align: center;
+  }
+}
