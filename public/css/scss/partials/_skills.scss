@@ -17,15 +17,33 @@
 
     .skill--container {
       @include flex(column, center, space-between);
-
+      @include for-tablet-landscape-up {
+        margin-bottom: 3em;
+      }
+      @include for-desktop-up {
+        margin-top: 2em;
+        margin-bottom: 3em;
+      }
       &-icon {
         width: 5rem;
+        @include for-tablet-landscape-up {
+          width: 6rem;
+        }
+        @include for-desktop-up {
+          width: 8rem;
+        }
       }
 
       &-desc {
         text-transform: uppercase;
         margin-top: 0.2em;
         color: rgba($text-color, 0.6);
+        @include for-tablet-landscape-up {
+          margin-top: 0.4em;
+        }
+        @include for-desktop-up {
+          margin-top: 0.5em;
+        }
       }
     }
   }

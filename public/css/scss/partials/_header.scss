@@ -2,17 +2,44 @@ header {
   height: 100vh;
   background: url("/assets/images/hero-image-small.png") no-repeat center;
   background-size: cover;
+
+  @include for-tablet-portrait-up {
+    background: url("/assets/images/hero-image-md.png") no-repeat;
+    background-size: 100%;
+    height: 100vh;
+  }
+
+  @include for-tablet-landscape-up {
+    height: 100vh;
+    background: url("/assets/images/hero-image.png") no-repeat;
+    background-size: 100%;
+  }
+
+  @include for-desktop-up {
+    height: 100vh;
+    background: url("/assets/images/hero-image.png") no-repeat;
+    background-size: 100%;
+  }
 }
 
 .hero {
-  height: 100%;
-  width: 100%;
   @include flex(null, null, center);
-
+  @include for-tablet-landscape-up {
+    height: 100%;
+  }
+  @include for-desktop-up {
+    @include flex(null, null, start);
+  }
   &--container {
     margin-top: 30%;
     @include flex(column, center, null);
-
+    @include for-tablet-landscape-up {
+      margin-top: 10%;
+    }
+    @include for-desktop-up {
+      margin-top: 20%;
+      margin-left: 5%;
+    }
     &-title {
       font-family: $heading-font;
       font-size: 7rem;
