@@ -1,16 +1,16 @@
-mixin project(image, altText, desc, skills)
+mixin project(image, altText, desc, skills, projectLink, demoLink, codeLink)
     .project--container
         h3.project--container-desc=desc
         p.project--container-skills=skills 
-        a.project--container-link(href="#")
+        a.project--container-link(href=projectLink)
             p.text view project
             i.fas.fa-search
             img.project--container-img(src=image, alt=altText)
         .project--container-btns
-            a.project--container-btn(href="#")
+            a.project--container-btn(href=demoLink target="_blank")
                 i.fas.fa-tv
                 p.project--container-btntext view demo
-            a.project--container-btn(href="#")
+            a.project--container-btn(href=codeLink target="_blank")
                 i.fab.fa-github
                 p.project--container-btntext view code
               
@@ -18,10 +18,10 @@ mixin project(image, altText, desc, skills)
 section
     h2 portfolio
     .projects--container-grid
-        +project('assets/images/pizza-magic.png', 'pizza magic', 'pizza magic website', 'html, bootstrap, css')
-        +project('assets/images/wellbeing.png', 'wellbeing', 'joanna thorne wellbeing', 'html, flexbox, css')
-        +project('assets/images/js-appsuite.png', 'office app', 'javascript office app', 'html, javascript')
-        +project('assets/images/chasing-the-rain.png', 'chasing the rain', 'chasing the rain', 'gatsby js')
+        +project('assets/images/pizza-magic.png', 'pizza magic', 'pizza magic website', 'html, materialize, css', '/projects/pizzamagic', 'http://pizzamagic-com.stackstaging.com/', 'https://github.com/idleist/pizza-magic')
+        +project('assets/images/wellbeing.png', 'wellbeing', 'joanna thorne wellbeing', 'html, flexbox, css', '/projects/wellbeing','https://joannathornewellbeing.co.uk/','https://github.com/idleist/joannathornewellbeing')
+        +project('assets/images/js-appsuite.png', 'office app', 'javascript office app', 'html, javascript', '#','http://office-app-com.stackstaging.com/','https://github.com/idleist/JavaScript-Office-App-Suite')
+        +project('assets/images/chasing-the-rain.png', 'chasing the rain', 'chasing the rain', 'gatsby js', '#','https://chasingtherain.co.uk/','https://github.com/idleist/Chasing-The-Rain-React-GatsbyJs')
 
     h2 about me
     img.about--img(src="assets/images/headshot.jpg", alt="Ben Rugman")

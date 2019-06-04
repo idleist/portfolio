@@ -102,3 +102,13 @@ nav {
   height: 60px;
   background: rgba($text-color, 0.9);
 }
+
+.project-nav {
+  position: relative;
+  height: 60px;
+  background: $text-color;
+
+  a {
+    text-transform: uppercase;
+  }
+}

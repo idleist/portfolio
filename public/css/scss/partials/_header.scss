@@ -24,6 +24,7 @@ header {
 
 .hero {
   @include flex(null, null, center);
+  height: 100vh;
   @include for-tablet-landscape-up {
     height: 100%;
   }
