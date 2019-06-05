@@ -4,40 +4,46 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex: 1 0 auto;
+
+  .part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.8em 0;
+
+    img {
+      margin: 1em 0;
+    }
+  }
 
   h3 {
     font-size: 1.5rem;
     color: rgba($text-color, 0.5);
     text-transform: uppercase;
-    text-align: center;
-    margin: 1.5em 0 0.5em 0;
+    margin-bottom: 0.4em;
   }
 
   p {
     font-size: 1.6rem;
     text-align: justify;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.6em;
   }
 
   .quote {
     color: $accent-color;
-    margin-bottom: 2em;
   }
 
   .mockup {
     width: 70%;
-    margin: 1em auto 0 auto;
   }
-  .screenshots--heading {
-    margin-top: 2em;
-  }
+
   .screenshots {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3em;
-    margin: 1em 0;
 
     .screenshot {
       display: flex;
@@ -54,6 +60,32 @@
         margin-top: 1em;
         text-align: center;
       }
+    }
+  }
+}
+
+.project--btns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+
+  .project--btn {
+    @include flex(null, center, space-between);
+    margin: 0 0.3em;
+    padding: 0.3em 1.3em;
+    background-color: $accent-color;
+    border-radius: 5px;
+
+    i {
+      color: #fff;
+      padding-right: 0.5em;
+    }
+
+    .project--btntext {
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 0.2em;
     }
   }
 }

@@ -18,10 +18,12 @@ mixin project(image, altText, desc, skills, projectLink, demoLink, codeLink)
 section
     h2 portfolio
     .projects--container-grid
+        +project('assets/images/portfolio.png', 'web portfolio', 'web portfolio', 'node, express, npm', '/projects/portfolio','#','#')
         +project('assets/images/pizza-magic.png', 'pizza magic', 'pizza magic website', 'html, materialize, css', '/projects/pizzamagic', 'http://pizzamagic-com.stackstaging.com/', 'https://github.com/idleist/pizza-magic')
         +project('assets/images/wellbeing.png', 'wellbeing', 'joanna thorne wellbeing', 'html, flexbox, css', '/projects/wellbeing','https://joannathornewellbeing.co.uk/','https://github.com/idleist/joannathornewellbeing')
-        +project('assets/images/js-appsuite.png', 'office app', 'javascript office app', 'html, javascript', '#','http://office-app-com.stackstaging.com/','https://github.com/idleist/JavaScript-Office-App-Suite')
+        +project('assets/images/js-appsuite.png', 'office app', 'javascript office app', 'html, javascript', '/projects/officeapp','http://office-app-com.stackstaging.com/','https://github.com/idleist/JavaScript-Office-App-Suite')
         +project('assets/images/chasing-the-rain.png', 'chasing the rain', 'chasing the rain', 'gatsby js', '#','https://chasingtherain.co.uk/','https://github.com/idleist/Chasing-The-Rain-React-GatsbyJs')
+        +project('assets/images/perrenial-home.png', 'perrennial designs', 'perrennial designs', 'node, express, npm, mongodb', '/projects/perrennialdesigns','https://radiant-reaches-88720.herokuapp.com/','https://github.com/idleist/perrennialdesigns')
 
     h2 about me
     img.about--img(src="assets/images/headshot.jpg", alt="Ben Rugman")

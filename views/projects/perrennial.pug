@@ -1,0 +1,45 @@
+extends layout
+
+block content
+    
+    section.project
+        
+            h2 perrennial designs website
+
+            .project--btns
+                a.project--btn(href='https://radiant-reaches-88720.herokuapp.com/' target="_blank")
+                    i.fas.fa-tv
+                    p.project--btntext view demo
+                a.project--btn(href='https://github.com/idleist/perrennialdesigns' target="_blank")
+                    i.fab.fa-github
+                    p.project--btntext view code
+            .part
+                h3.screenshots--heading screenshots
+                .screenshots
+                    .screenshot
+                        img(src="/assets/images/perrenial-home.png", alt="perrennial designs homepage")
+                        p Home page
+                    .screenshot
+                        img(src="/assets/images/perrennial-contact.png", alt="perrennial contact form")
+                        p Contact page
+                    .screenshot
+                        img(src="/assets/images/perrennial-admin.png", alt="perrennial admin page")
+                        p Admin page
+            
+            .part
+                h3 project outline
+                p This is a concept web site.  It is based on a family gardening landscape company.  I used this project  as a building block to carry out a fully functioning site from the initial planning and mockup stages, the full design of a logo and the implementation of a node back end.  The goal of this website was to produce a dynamic company site with it’s own simple content management system.  Many clients wish to change details on their sites, but are often confused by the available CMS’s available.  This site would allow the owners of the site to change content easily, including adding testimonials and updating their latest work.
+                p This website is not production ready.  As you can see from the demo, there is an accessible admin page.  In final production, this would be accessible via a hidden html route and a login system for the administrators of the website (similar to Wordpress).
+                p I also used the nodemailer package for a fully functional contact form and the multer package to allow the uploading of images to the web page.
+
+            .part
+                h3 logo
+                img.mockup(src="/assets/images/perrennial-logo.png", alt="perrennial designs logo")
+                p The logo was created in inkscape.  I wanted to convey the landscaping aspect of the company.  The logo incorporates the feel of a technical drawing with the initials of the company.
+
+            .part
+                h3 moodboard
+                img.mockup(src="/assets/images/perrennial-moodboard.png", alt="perrennial designs moodboard")
+                p I wanted a clean design with a good use of whitespace, but with colours that convey that this is a gardening website.  I chose two contrasting greens to add interest and accent colours on the website.
+                
+            

@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    
+    section.project
+        
+            h2 JavaScript Office App
+
+            .project--btns
+                a.project--btn(href='http://office-app-com.stackstaging.com/' target="_blank")
+                    i.fas.fa-tv
+                    p.project--btntext view demo
+                a.project--btn(href='https://github.com/idleist/JavaScript-Office-App-Suite' target="_blank")
+                    i.fab.fa-github
+                    p.project--btntext view code
+            
+            
+            .part
+                h3 project outline
+                p This project was part of my Web Development and Design course.  After studying Javascript, I wanted to put into practice many aspects of the language I had learned..  The entire ‘app’ is written in vanilla Javascript.  It has a very basic login system that uses local storage.  It was never meant to be a production application.  It was a sandbox project for me to explore Javascript and use it in a number of different ways to manipulate the DOM, make API calls and store information in Local Storage.
+            .part
+                h3.screenshots--heading screenshots
+                .screenshots
+                    .screenshot
+                        img(src="/assets/images/appsuite-login.png", alt="office app login")
+                        p Login page for the application
+                    .screenshot
+                        img(src="/assets/images/appsuite-homescreen.png", alt="office app homescreen")
+                        p Homepage screenshot
+                    .screenshot
+                        img(src="/assets/images/appsuite-breaks.png", alt="office app")
+                        p Schedule your daily break times
