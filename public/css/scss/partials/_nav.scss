@@ -21,6 +21,13 @@ nav {
     cursor: pointer;
     transition: transform 650ms ease-out;
 
+    @include for-tablet-landscape-up {
+      display: none;
+    }
+
+    @include for-desktop-up {
+      display: none;
+    }
     .bar {
       background: #fff;
       width: 100%;
@@ -59,6 +66,30 @@ nav {
 
   .top-nav {
     display: none;
+
+    @include for-tablet-landscape-up {
+      @include flex(null, center, space-between);
+    }
+
+    @include for-desktop-up {
+      @include flex(null, center, space-between);
+    }
+
+    .topnav-list {
+      list-style: none;
+      @include flex(null, center, space-between);
+    }
+
+    .topnav-link {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      transition: color 350ms ease-in;
+      margin-right: 1em;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
   }
 
   .overlay-nav {
@@ -70,6 +101,13 @@ nav {
     background-color: rgba($text-color, 0.8);
     transition: all 650ms cubic-bezier(1, 0, 0, 1);
     @include flex(null, center, center);
+    @include for-tablet-landscape-up {
+      display: none;
+    }
+
+    @include for-desktop-up {
+      display: none;
+    }
 
     ul {
       height: 80%;

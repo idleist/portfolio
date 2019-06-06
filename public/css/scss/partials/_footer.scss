@@ -21,8 +21,15 @@ footer {
     width: 100%;
     color: #fff;
     background: $accent-color;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 0.3em 0.8em;
+    transition: all 350ms ease-in;
+
+    &:hover {
+      color: $accent-color;
+      background: #fff;
+      border: 2px solid $accent-color;
+    }
   }
 }
 
@@ -31,6 +38,13 @@ footer {
     margin: 0 0.3em;
     img {
       width: 2em;
+
+      &:hover {
+        opacity: 0.8;
+        border-radius: 50%;
+        background: $accent-color;
+        box-shadow: 0 0 5px 0 rgba($accent-color, 0.7);
+      }
     }
   }
 }

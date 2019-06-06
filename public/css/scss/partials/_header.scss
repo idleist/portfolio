@@ -84,6 +84,13 @@ header {
       background: $accent-color;
       border-radius: 10px;
       padding: 0.5em 1em;
+      transition: all 350ms ease-in;
+
+      &:hover {
+        color: $accent-color;
+        background: #fff;
+        border: 2px solid $accent-color;
+      }
     }
   }
 }

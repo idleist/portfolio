@@ -20,25 +20,25 @@ html(lang="en")
                     .bar
                     .bar.half.end
                 .top-nav
-                    ul.nav-list
+                    ul.topnav-list
                         li
-                            a.nav-link(href='#') Skills
+                            a.topnav-link(href='#skills') Skills
                         li
-                            a.nav-link(href='#') Portfolio
+                            a.topnav-link(href='#portfolio') Portfolio
                         li
-                            a.nav-link(href='#') About
+                            a.topnav-link(href='#about') About
                         li
-                            a.nav-link(href='#') Contact
+                            a.topnav-link(href='#contact') Contact
                 .overlay-nav
                     ul.nav-list
                         li
-                            a.nav-link(href='#') Skills
+                            a.nav-link(href='#skills') Skills
                         li
-                            a.nav-link(href='#') Portfolio
+                            a.nav-link(href='#portfolio') Portfolio
                         li
-                            a.nav-link(href='#') About
+                            a.nav-link(href='#about') About
                         li
-                            a.nav-link(href='#') Contact
+                            a.nav-link(href='#contact') Contact
         
             .hero
                 .hero--container
@@ -51,7 +51,7 @@ html(lang="en")
                             img(src="/assets/svg/githublogo.svg", alt="github")
                         a(href="#")
                             img(src="/assets/svg/codepenlogo.svg", alt="code pen")
-                    a(href="#").hero--container-btn Show Me More
+                    a(href="/assets/cv.pdf" download='benrugmanCV').hero--container-btn Download CV
 
         block content
 
@@ -66,12 +66,12 @@ html(lang="en")
                     .contact--links-social
                         a(href="#")
                             img(src="/assets/svg/linkedinlogo.svg", alt="linked in")
-                        a(href="#")
+                        a(href="https://www.github.com/idleist", target="_blank")
                             img(src="/assets/svg/githublogo.svg", alt="github")
-                        a(href="#")
+                        a(href="https://codepen.io/Idleist/", target="_blank")
                             img(src="/assets/svg/codepenlogo.svg", alt="code pen")
                     
-                    a(href="#").cv--btn my cv
+                    a(href="/assets/cv.pdf" download='benrugmanCV').cv--btn my cv
 
 
             p Copyright &copy; 2019 | Website Designed by Ben Rugman
