@@ -2,7 +2,8 @@ section#contact
     #form--container
         .form--container
             h2.form--heading Contact
-            form(method='post', action='contact/send')
+            .sentMessage=msg
+            form(method='POST', action='contact/send')
                 .form--input-container
                     input(type='text', name='name' required)
                     label Name  
