@@ -1,9 +1,9 @@
 // Node Packages //
 const express = require("express");
 const app = express();
-require('dotenv').config();
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
+require("dotenv").config();
 var path = require("path");
 
 const PORT = process.env.PORT;
@@ -43,23 +43,35 @@ app.post("/contact/send", (req, res) => {
     <h3>Message</h3>
     <p>${req.body.message}</p>
   `;
-  console.log(req.body);
+  console.log(process.env.USER, process.env.PASSWORD);
+  let transporter = nodemailer.createTransport({
+    host: "smtp.mail.yahoo.com",
+    port: 587,
+    secure: false, // upgrade later with STARTTLS
+    auth: {
+      user: process.env.USER,
+      pass: process.env.PASSWORD
+    }
+  });
+
+  let mailOptions = {
+    from: `Ben Rugman <idleistdesign@yahoo.com>`, // sender address
+    to: "idleistdesign@yahoo.com", // list of receivers
+    subject: "Message from Portfolio Website", // Subject line
+    text: "Hello", // plain text body
+    html: output // html body
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return console.log(error);
+    }
+    console.log("Message %s sent: %s", info.messageId, info.response);
+    res.redirect("/");
+  });
 });
 
 // Initialise Server //
 app.listen(PORT, () => {
   console.log(`app started on port ${PORT}`);
-});
-
-
-let transporter = nodemailer.createTransport(transport[, defaults])
-
-nodemailer.createTransport({
-  host: "smtp.example.com",
-  port: 587,
-  secure: false, // upgrade later with STARTTLS
-  auth: {
-    user: "username",
-    pass: "password"
-  }
 });
