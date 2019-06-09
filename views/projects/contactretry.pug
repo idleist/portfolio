@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    section#contact
+        #form--container
+            .form--container
+                h2.form--heading Contact
+                if errors
+                    .sentMessage
+                        each error in errors
+                            p=error
+                form(method='POST', action='contact')
+                    .form--input-container
+                        input(type='text', name='name')
+                        label Name  
+                    .form--input-container
+                        input(type='email', name='email')
+                        label Email  
+                    .form--input-container
+                        textarea(name='message')
+                        label Message
+                    input(type='submit' value='SEND MESSAGE') 

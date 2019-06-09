@@ -21,4 +21,8 @@ router.get("/portfolio", (req, res) => {
   res.render("projects/portfolio");
 });
 
+router.get("/chasingtherain", (req, res) => {
+  res.render("projects/chasingtherain");
+});
+
 module.exports = router;

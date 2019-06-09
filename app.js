@@ -12,6 +12,9 @@ const PORT = process.env.PORT;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Validation
+const { check, validationResult, body } = require("express-validator/check");
+
 // Import Routes
 const projects = require("./routes/projects");
 
@@ -32,8 +35,29 @@ app.get("/", (req, res) => {
 });
 
 // Contact Form Route
-app.post("/contact/send", (req, res) => {
-  const output = `
+app.post(
+  "/contact",
+  [
+    check("name", "Please include your name")
+      .not()
+      .isEmpty(),
+    check("email", "Please include a valid email").isEmail(),
+    body("message")
+      .not()
+      .isEmpty()
+      .withMessage("Please Include a short message")
+      .trim()
+      .escape()
+  ],
+  (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      let errormessages = errors.array().map(error => error.msg);
+      console.log(errormessages);
+
+      return res.render("projects/contactretry", { errors: errormessages });
+    }
+    const output = `
     <p>You have a new message</p>
     <h3>Contact Details</h3>
     <ul>
@@ -43,33 +67,34 @@ app.post("/contact/send", (req, res) => {
     <h3>Message</h3>
     <p>${req.body.message}</p>
   `;
-  console.log(process.env.USER, process.env.PASSWORD);
-  let transporter = nodemailer.createTransport({
-    host: "smtp.mail.yahoo.com",
-    port: 587,
-    secure: false, // upgrade later with STARTTLS
-    auth: {
-      user: process.env.USER,
-      pass: process.env.PASSWORD
-    }
-  });
+    console.log(process.env.USERNAME, process.env.PASSWORD);
+    let transporter = nodemailer.createTransport({
+      host: "smtp.mail.yahoo.com",
+      port: 587,
+      secure: false, // upgrade later with STARTTLS
+      auth: {
+        user: process.env.USERNAME,
+        pass: process.env.PASSWORD
+      }
+    });
 
-  let mailOptions = {
-    from: `Ben Rugman <idleistdesign@yahoo.com>`, // sender address
-    to: "idleistdesign@yahoo.com", // list of receivers
-    subject: "Message from Portfolio Website", // Subject line
-    text: "Hello", // plain text body
-    html: output // html body
-  };
+    let mailOptions = {
+      from: `Ben Rugman <idleistdesign@yahoo.com>`, // sender address
+      to: "idleistdesign@yahoo.com", // list of receivers
+      subject: "Message from Portfolio Website", // Subject line
+      text: "Hello", // plain text body
+      html: output // html body
+    };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      return console.log(error);
-    }
-    console.log("Message %s sent: %s", info.messageId, info.response);
-    res.redirect("/");
-  });
-});
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        return console.log(error);
+      }
+      console.log("Message %s sent: %s", info.messageId, info.response);
+      res.redirect("/");
+    });
+  }
+);
 
 // Initialise Server //
 app.listen(PORT, () => {

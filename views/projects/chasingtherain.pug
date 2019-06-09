@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    
+    section.project
+        
+            h2 chasing the rain website
+
+            .project--btns
+                a.project--btn(href='https://chasingtherain.co.uk/' target="_blank")
+                    i.fas.fa-tv
+                    p.project--btntext view demo
+                a.project--btn(href='https://github.com/idleist/Chasing-The-Rain-React-GatsbyJs' target="_blank")
+                    i.fab.fa-github
+                    p.project--btntext view code
+
+            .part
+                h3 project outline
+                p This is an ongoing project.  My brother recently completed his first novel.  He wanted a website to allow visitors to learn a little bit about the novel, the author and a link to the book on Amazon.  
+                p I had recently been working with React and thought that this would be a great project to build with GatsbyJS.  
+            
+            .part
+                h3.screenshots--heading screenshots
+                .screenshots
+                    .screenshot
+                        img(src="/assets/images/chasing-the-rain-author.png", alt="chasing the rain")
+                        p About the author
+                    .screenshot
+                        img(src="/assets/images/chasing-the-rain-home.png", alt="office app homescreen")
+                        p Homepage screenshot
+                    .screenshot
+                        img(src="/assets/images/chasing-the-rain-mobile.png", alt="mobile view")
+                        p Mobile view

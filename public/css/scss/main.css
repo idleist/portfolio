@@ -812,6 +812,18 @@ header {
   margin-bottom: 0.6em;
 }
 
+@media (max-width: 599px) {
+  .project p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .project p {
+    font-size: 1.5rem;
+  }
+}
+
 .project .quote {
   color: #168d8d;
 }
@@ -827,6 +839,30 @@ header {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 3em;
+}
+
+@media (max-width: 599px) {
+  .project .screenshots {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+}
+
+@media (max-width: 599px) {
+  .project .screenshots {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .project .screenshots {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
 }
 
 .project .screenshots .screenshot {
@@ -894,6 +930,19 @@ header {
 #contact {
   background: url("/assets/svg/contactbg.svg") no-repeat;
   background-size: 100%;
+}
+
+.sentMessage {
+  padding: 1em;
+  width: 100%;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5em;
+}
+
+.sentMessage p {
+  font-size: 1.2em;
+  color: red;
 }
 
 form {
@@ -1031,6 +1080,61 @@ footer .contact {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 599px) {
+  footer .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+footer .copy {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 599px) {
+  footer .copy {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 599px) {
+  .contact--details {
+    margin-bottom: 0.5em;
+  }
+}
+
+.contact--details .media {
+  text-transform: uppercase;
+  color: #168d8d;
+}
+
+@media (max-width: 599px) {
+  .contact--details .media {
+    text-align: center;
+  }
+}
+
+.contact--details .contact-info {
+  font-weight: 600;
+}
+
+@media (max-width: 599px) {
+  .contact--details .contact-info {
+    text-align: center;
+  }
 }
 
 .contact--links {

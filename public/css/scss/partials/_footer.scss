@@ -8,6 +8,38 @@ footer {
     width: 90%;
     padding-bottom: 1em;
     @include flex(null, null, space-between);
+
+    @include for-phone-only {
+      @include flex(column, center, center);
+    }
+  }
+
+  .copy {
+    color: rgba(#fff, 0.6);
+    @include for-phone-only {
+      font-size: 0.8em;
+    }
+  }
+}
+
+.contact--details {
+  @include for-phone-only {
+    margin-bottom: 0.5em;
+  }
+  .media {
+    text-transform: uppercase;
+    color: $accent-color;
+
+    @include for-phone-only {
+      text-align: center;
+    }
+  }
+
+  .contact-info {
+    font-weight: 600;
+    @include for-phone-only {
+      text-align: center;
+    }
   }
 }
 

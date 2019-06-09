@@ -29,6 +29,14 @@
     font-size: 1.6rem;
     text-align: justify;
     margin-bottom: 0.6em;
+
+    @include for-phone-only {
+      font-size: 1.4rem;
+    }
+
+    @include for-tablet-portrait-up {
+      font-size: 1.5rem;
+    }
   }
 
   .quote {
@@ -44,6 +52,21 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3em;
+
+    @include for-phone-only {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
+
+    @include for-phone-only {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
+
+    @include for-tablet-portrait-up {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
 
     .screenshot {
       display: flex;
